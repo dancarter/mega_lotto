@@ -3,11 +3,9 @@ module MegaLotto
     NUMBERS = 6
 
     def draw
-      arr = []
-      NUMBERS.times do
+      NUMBERS.times.inject([]) do |arr, i|
         arr << single_draw
       end
-      arr
     end
 
     private
