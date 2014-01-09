@@ -9,8 +9,8 @@ module MegaLotto
         draw.should be_a(Array)
       end
 
-      it "returns an array with 5 elements" do
-        expect(draw.count).to eq(5)
+      it "returns an array with 6 elements" do
+        expect(draw.count).to eq(6)
       end
 
       it "returns only have integers" do
@@ -19,9 +19,9 @@ module MegaLotto
         end
       end
 
-      it "returns integers less than 60" do
+      it "returns integers less than or equal to 60" do
         draw.each do |drawing|
-          expect(drawing).to be < 60
+          expect(drawing).to be <= 60
         end
       end
     end
